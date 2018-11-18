@@ -1,4 +1,4 @@
-# css-class-highlighter package
+# atom-class-highlighter package
 
 A short description of your package.
 
