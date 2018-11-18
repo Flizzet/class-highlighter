@@ -1,5 +1,5 @@
 {
-  "name": "Class Highlighter",
+  "name": "ClassHighlighter",
   "main": "./lib/class-highlighter",
   "version": "1.0.0",
   "description": "Adds clean highlights to the Atom editor",

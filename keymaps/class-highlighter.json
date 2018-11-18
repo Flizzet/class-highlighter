@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "css-class-highlighter:highlight"
+    "cmd-ctrl-alt-h": "class-highlighter:highlight"
   }
 }
