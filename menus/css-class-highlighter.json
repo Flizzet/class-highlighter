@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Highlight CSS",
+        "command": "css-class-highlighter:highlight"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "css-class-highlighter",
+          "submenu": [
+            {
+              "label": "Highlight CSS",
+              "command": "css-class-highlighter:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
