@@ -1,13 +1,13 @@
 {
-  "name": "css-class-highlighter",
-  "main": "./lib/css-class-highlighter",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "name": "Class Highlighter",
+  "main": "./lib/class-highlighter",
+  "version": "1.0.0",
+  "description": "Adds clean highlights to the Atom editor",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "css-class-highlighter:toggle"
+    "atom-workspace": "class-highlighter:highlight"
   },
-  "repository": "https://github.com/atom/css-class-highlighter",
+  "repository": "https://github.com/Flizzet/class-highlighter",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Highlight CSS",
-        "command": "css-class-highlighter:highlight"
+        "label": "Highlight Classes",
+        "command": "class-highlighter:highlight"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "css-class-highlighter",
+          "label": "Class Highlighter",
           "submenu": [
             {
-              "label": "Highlight CSS",
-              "command": "css-class-highlighter:toggle"
+              "label": "Highlight Classes",
+              "command": "class-highlighter:highlight"
             }
           ]
         }

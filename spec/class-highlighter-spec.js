@@ -1,13 +1,13 @@
 'use babel';
 
-import CssClassHighlighter from '../lib/css-class-highlighter';
+import ClassHighlighter from '../lib/class-highlighter';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('CssClassHighlighter', () => {
+describe('ClassHighlighter', () => {
 
 	console.log("Initialize");
 
@@ -15,33 +15,33 @@ describe('CssClassHighlighter', () => {
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('css-class-highlighter');
+    activationPromise = atom.packages.activatePackage('class-highlighter');
   });
 
-  describe('when the css-class-highlighter:toggle event is triggered', () => {
+  describe('when the class-highlighter:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.css-class-highlighter')).not.toExist();
+      expect(workspaceElement.querySelector('.class-highlighter')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'css-class-highlighter:toggle');
+      atom.commands.dispatch(workspaceElement, 'class-highlighter:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.css-class-highlighter')).toExist();
+        expect(workspaceElement.querySelector('.class-highlighter')).toExist();
 
-        let cssClassHighlighterElement = workspaceElement.querySelector('.css-class-highlighter');
-        expect(cssClassHighlighterElement).toExist();
+        let classHighlighterElement = workspaceElement.querySelector('.class-highlighter');
+        expect(classHighlighterElement).toExist();
 
-        let cssClassHighlighterPanel = atom.workspace.panelForItem(cssClassHighlighterElement);
-        expect(cssClassHighlighterPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'css-class-highlighter:toggle');
-        expect(cssClassHighlighterPanel.isVisible()).toBe(false);
+        let classHighlighterPanel = atom.workspace.panelForItem(classHighlighterElement);
+        expect(classHighlighterPanel.isVisible()).toBe(true);
+        atom.commands.dispatch(workspaceElement, 'class-highlighter:toggle');
+        expect(classHighlighterPanel.isVisible()).toBe(false);
       });
     });
 
@@ -54,11 +54,11 @@ describe('CssClassHighlighter', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.css-class-highlighter')).not.toExist();
+      expect(workspaceElement.querySelector('.class-highlighter')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'css-class-highlighter:toggle');
+      atom.commands.dispatch(workspaceElement, 'class-highlighter:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -66,10 +66,10 @@ describe('CssClassHighlighter', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let cssClassHighlighterElement = workspaceElement.querySelector('.css-class-highlighter');
-        expect(cssClassHighlighterElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'css-class-highlighter:toggle');
-        expect(cssClassHighlighterElement).not.toBeVisible();
+        let ClassHighlighterElement = workspaceElement.querySelector('.class-highlighter');
+        expect(ClassHighlighterElement).toBeVisible();
+        atom.commands.dispatch(workspaceElement, 'class-highlighter:toggle');
+        expect(ClassHighlighterElement).not.toBeVisible();
       });
     });
   });
