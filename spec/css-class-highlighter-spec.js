@@ -1,3 +1,12 @@
+/**
+ * @Author: flizzet
+ * @Date:   2018-11-18T05:56:01-08:00
+ * @Last modified by:   flizzet
+ * @Last modified time: 2018-11-18T06:28:24-08:00
+ */
+
+
+
 'use babel';
 
 import CssClassHighlighter from '../lib/css-class-highlighter';
@@ -8,6 +17,10 @@ import CssClassHighlighter from '../lib/css-class-highlighter';
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe('CssClassHighlighter', () => {
+
+
+	console.log("Initialize");
+
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
